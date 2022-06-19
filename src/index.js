@@ -12,8 +12,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 const groupRouter = require("./group/group.router");
+const studentRouter = require("./student/student.router");
 
 app.use("/group", groupRouter);
+app.use("/student", studentRouter);
 
 const startServer = async () => {
   await db.connect();

@@ -1,7 +1,6 @@
 const { Schema } = require("mongoose");
 
 const mongoose = require("mongoose");
-const { Schem } = mongoose;
 
 const groupSchema = new Schema(
   {
@@ -13,13 +12,13 @@ const groupSchema = new Schema(
     class: {
       type: String,
       required: true,
-      maxlenght:1
+      maxlenght: 1,
     },
     tutor: {
       type: String,
       required: true,
-      maxlength: 50
-    }
+      maxlength: 50,
+    },
   },
   { timestamps: true }
 );

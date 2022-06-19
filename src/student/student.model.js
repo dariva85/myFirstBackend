@@ -1,7 +1,5 @@
 const { Schema } = require("mongoose");
-
 const mongoose = require("mongoose");
-const { Schem } = mongoose;
 
 const groupSchema = new Schema(
   {
@@ -23,6 +21,6 @@ const groupSchema = new Schema(
   { timestamps: true }
 );
 
-const Group = mongoose.model("group", groupSchema);
+const student = mongoose.model("students", groupSchema);
 
-module.exports = Group;
+module.exports = student;

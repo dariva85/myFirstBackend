@@ -1,3 +1,4 @@
+const { isObjectIdOrHexString } = require("mongoose");
 const Group = require("./group.model");
 
 const findMany = async (req, res) => {
@@ -48,7 +49,9 @@ const deleteOne = async (req, res) => {
 const findOne = async (req, res) => {
   const { id } = req.params;
   try {
-    const data = await Group.find({ _id: id }).lean().exec();
+    console.log(`findOne whit id: ${id}`);
+    const data = await Group.findById(id).lean().exec();
+    console.log(data);
     if (!data) {
       return res.status(404).json({ error: "not found" });
     }
